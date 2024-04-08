@@ -1,0 +1,308 @@
+:root {
+
+    /* primary colors */
+    --clr-primary-200: hsl(321, 100%, 78%);
+    --clr-primary-300: hsl(322, 100%, 66%);
+    --clr-primary-400: hsl(0, 100%, 63%);
+
+    /* neutral colors */
+    --clr-neutral-200: hsl(207, 100%, 98%);
+    --clr-neutral-700: hsl(192, 100%, 9%);
+
+    /* font families */
+    --ff-body: "Open Sans", sans-serif;
+    --ff-headings: "Poppins", sans-serif;
+
+    /* font-sizes */
+    --fs-100: .7rem;
+    --fs-200: .8rem;
+    --fs-400: .9rem;
+
+    /* font-weights */
+    --fw-100: 400;
+    --fw-200: 600;
+    --fw-300: 700;
+}
+
+.bigger {
+    font-size: 10rem;
+    color: red;
+    text-decoration: underline;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-100);
+    text-align: center;
+    padding-block: 2rem;
+
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+h1, h2 {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-300);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.container {
+    width: 80%;
+    max-width: 950px;
+    margin-inline: auto;
+
+}
+
+.grid {
+    display: grid;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+
+/* ***************************************** */
+/* header */
+/* ***************************************** */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 6em;
+}
+
+h1 {
+    font-size: 1.8m;
+}
+
+.main_logo {
+    width: 7rem;
+}
+
+.nav_btn {
+    font-size: var(--fs-200);
+    color: var(--clr-primary-300);
+    border: solid var(--clr-primary-300) 2px;
+    border-radius: 100px;
+    padding: .1rem 1.5em;
+}
+
+.nav_btn:hover {
+    opacity: 60%;
+}
+
+.description {
+    max-width: 28rem;
+    margin-inline: auto;
+}
+
+.btn {
+    border-radius: 100px;
+    width: 15rem;
+    margin-inline: auto;
+    background-color: var(--clr-primary-300);
+    color: white;
+    padding: .6rem 0;
+    margin-block: 3em;
+}
+
+.btn:hover {
+    opacity: 70%;
+}
+
+.stats {
+    line-height: 1;
+    margin-top: 5rem;
+}
+
+.stats img {
+    width: 1.7rem;
+}
+
+.number {
+    font-size: 3em;
+    font-weight: var(--fw-300);
+    margin-bottom: .9rem;
+    margin-top: .5rem;
+}
+
+.communities, .messages {
+    margin-inline: auto;
+}
+
+.fs_sm {
+    font-size: var(--fs-100);
+    color: rgb(175, 175, 175);
+}
+
+
+
+/* ***************************************** */
+/* main */
+/* ***************************************** */
+
+main {
+    margin-top: 4rem;
+}
+
+.bg_light-blue {
+    background-color: var(--clr-neutral-200);
+}
+
+.conversations {
+    margin-block: 6rem;
+}
+
+.subscribe {
+    margin-block: 5rem;
+}
+
+.subscribe .btn {
+    margin-top: 1.5rem;
+}
+
+
+/* ***************************************** */
+/* footer */
+/* ***************************************** */
+
+footer {
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-200);
+    text-align: left;
+    padding-block: 3rem;
+}
+
+.signup {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: .7rem;
+}
+
+.signup p {
+    background-color: var(--clr-neutral-200);
+    padding-block: 0.5em;
+    border-radius: .3rem;
+}
+
+.footer_btn {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    background-color: var(--clr-primary-300);
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.footer_btn:hover {
+    opacity: 70%;
+}
+
+.logo_footer {
+    width: 11rem;
+    margin-bottom: 1rem;
+}
+
+.phone, .email {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+
+.phone {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.email {
+    margin-bottom: 2.5rem;
+}
+
+.social {
+    display: flex;
+}
+
+.icon {
+    font-size: 1rem;
+    margin-inline: .3rem;
+    border: solid 1px;
+    border-radius: 100px;
+    padding: .4rem;
+}
+
+.icon:hover {
+    background-color: rgb(26, 82, 117);
+}
+
+/* ***************************************** */
+/* media queries */
+/* ***************************************** */
+
+
+@media(min-width: 48rem) {
+
+    .grid {
+        grid-template-columns: 1fr 1fr;        
+    }
+
+    main {
+        text-align: left;
+    }
+
+    .grid_item1 {
+        grid-column: 2;
+    }
+
+    .grid_item2 {
+        grid-row: 1;
+    }
+
+    .subscribe {
+        text-align: center;
+    }
+
+    footer .grid {
+        gap: 10rem;
+    }
+
+    .footer_btn {
+        margin: 0;
+        width: auto;
+        padding-block: .4rem;
+    }
+    
+    .signup {
+        grid-template-columns: 60% 1fr;
+        gap: 1.5rem;
+    }
+}
